@@ -1,7 +1,17 @@
 ---
+import Social from "./Social.astro";
+
 const platform = "github";
 const username = "hbg07";
 ---
+
+<style>
+  footer {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+</style>
 
 <footer>
   <p>
@@ -9,4 +19,7 @@ const username = "hbg07";
       href={`https://www.${platform}.com/${username}`}>{platform}</a
     >!
   </p>
+  <Social platform="twitter" username="hamselbg07" />
+  <Social platform="github" username="hbg07" />
+  <Social platform="youtube" username="hamselbg" />
 </footer>
