@@ -110,8 +110,27 @@ const mdTitles = mdFiles.map((md) => md.frontmatter.title);
 console.log(mdTitles);
 ```
 
-## Component
+## Components
 Se pueden crear componentes en la sección de components los cuales tienen como objetivo reutilizarse en el código de la forma `<ComponentName />`
+
+`components/HelloWorld.astro`
+```typescript
+---
+---
+
+<main>Hello World</main>
+```
+
+`pages/index.astro`
+```typescript
+---
+import HelloWorld from 'components/HelloWorld.astro'
+---
+
+<div>
+  <HelloWorld />
+</div>
+```
 
 ## Layouts
 Los Layouts son como componentes utilizados como contenedores los cuales se utilizan para agrupar muchos componentes o HTML de manera general con piezas llamadas slots los cuales permiten insertar elementos dentro de los mismos. Estos slots se pueden utilizar dentro de cualquier componente.
